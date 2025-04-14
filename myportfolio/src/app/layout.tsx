@@ -3,10 +3,12 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ModernAirportBanner from "@/components/Banner";
+import BackToTopButton from "@/components/BackToTopButton";
 
 export const metadata: Metadata = {
-  title: "My Portfolio",  
-  description: "Welcome to my portfolio website, where I showcase my projects and skills.",
+  title: "My Portfolio",
+  description:
+    "Welcome to my portfolio website, where I showcase my projects and skills.",
 };
 
 export default function RootLayout({
@@ -19,10 +21,9 @@ export default function RootLayout({
       <body className="min-h-screen bg-gray-50 text-gray-900">
         <NavBar />
         <ModernAirportBanner />
-        <main>
-        {children}
-        </main>
+        <main>{children}</main>
         <Footer />
+        <BackToTopButton />
       </body>
     </html>
   );

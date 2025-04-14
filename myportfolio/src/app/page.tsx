@@ -1,9 +1,12 @@
 // pages/index.tsx
-'use client';
+"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import Typewriter from "@/components/Typewriter";
+import { FaDownload } from "react-icons/fa6";
+import Image from "next/image";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -12,7 +15,7 @@ export default function Home() {
   informs my approach to user experience and interface design. 
   With experience leading diverse teams in dynamic environments, 
   I specialize in crafting responsive, accessible, and impactful digital products using 
-  React, Node.js, and Python. I aspire to continue innovating at the intersection of biotechnology, 
+  React, Node.js, Python, between others. I aspire to continue innovating at the intersection of biotechnology, 
   software development, and artistry, creating products that genuinely enhance people's lives.`;
 
   return (
@@ -30,35 +33,53 @@ export default function Home() {
         exit={{ opacity: 0 }}
       >
         {/* Sección Home */}
-        <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-gray-50 px-4 py-8">
-          <h1 className="text-center text-3xl font-bold mb-4">My Portfolio</h1>
-          <div className="w-full md:w-1/2 min-h-[200px]">
+        <section
+          id="home"
+          className="min-h-screen flex flex-col justify-start items-center bg-gray-50 px-4 py-8"
+        >
+          <h1 className="text-center text-3xl mt-10 font-bold mb-8">
+            {`< About me />`}
+          </h1>
+          <div className="w-full md:w-1/2 min-h-[200px] text-center">
             <Typewriter text={loremText} speed={30} />
+          </div>
+          <div className="flex flex-row justify-center items-center gap-4 mt-10 text-lg text-blue-600 hover:underline">
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              education & experience
+            </a>
+            <FaDownload />
           </div>
         </section>
 
         {/* Sección About */}
-        <section id="philosophy" className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-4 py-8">
-          <h2 className="text-3xl font-bold mb-4">Sobre mí</h2>
+        <section
+          id="philosophy"
+          className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-4 py-8"
+        >
+          <h2 className="text-3xl font-bold mb-4">how do i approach work?</h2>
           <p className="max-w-2xl text-center text-lg">
-            Aquí va una breve descripción sobre ti, tu experiencia y lo que te apasiona.
+            Aquí va una breve descripción sobre ti, tu experiencia y lo que te
+            apasiona.
           </p>
         </section>
 
         {/* Sección Projects */}
-        <section id="work" className="min-h-screen flex flex-col justify-center items-center bg-gray-50 px-4 py-8">
-          <h2 className="text-3xl font-bold mb-4">Proyectos</h2>
-          <p className="max-w-2xl text-center text-lg">
-            A continuación se muestran algunos de mis proyectos más destacados.
-          </p>
-          {/* Aquí podrías renderizar una grid o slider con tus proyectos */}
+        <section
+          id="work"
+          className="min-h-screen flex flex-col justify-center items-center bg-gray-50 px-4 py-8"
+        >
+          <ProjectsSection />
         </section>
 
         {/* Sección Contact */}
-        <section id="contact" className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-4 py-8">
-          <h2 className="text-3xl font-bold mb-4">Contacto</h2>
+        <section
+          id="contact"
+          className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-4 py-8"
+        >
+          <h2 className="text-3xl font-bold mb-4">contact me</h2>
           <p className="max-w-2xl text-center text-lg">
-            Puedes comunicarte conmigo mediante las redes sociales o enviarme un mensaje directo.
+            Puedes comunicarte conmigo mediante las redes sociales o enviarme un
+            mensaje directo.
           </p>
           {/* También podrías incluir un formulario de contacto */}
         </section>
