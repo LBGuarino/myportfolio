@@ -12,7 +12,7 @@ export default function BackToTopButton() {
       // Se muestra cuando estamos a 100px del final
       if (
         window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - 100
+        document.body.offsetHeight - 1000
       ) {
         setIsVisible(true);
       } else {

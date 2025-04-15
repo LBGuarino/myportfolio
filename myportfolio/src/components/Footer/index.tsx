@@ -32,7 +32,7 @@ export default function Footer() {
             <FaGithub />
           </a>
           <Link
-            href="/contact"
+            href="mailto:guarinolucia@icloud.com"
             className="text-2xl hover:text-gray-300 transition-colors"
           >
             <FaEnvelope />

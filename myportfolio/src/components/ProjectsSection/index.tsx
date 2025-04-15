@@ -92,7 +92,7 @@ export default function ProjectsSection() {
             </div>
             {/* Contenido de la tarjeta */}
             <div className="p-6 flex flex-col items-center">
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <h3 className="text-xl text-center font-bold mb-2">{project.title}</h3>
               <p className="text-gray-600 text-center mb-4">
                 {project.description}
               </p>
