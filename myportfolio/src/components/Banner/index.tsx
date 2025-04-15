@@ -57,7 +57,7 @@ export default function AirportBanner() {
 
   return (
     <div className="w-full bg-gray-200 py-2 flex items-center justify-center">
-      <h2 className="text-xl md:text-2xl font-mono font-bold">
+      <h2 className="text-lg sm:text-xl md:text-2xl font-mono font-bold">
         I am {displayedText}
       </h2>
     </div>

@@ -35,7 +35,7 @@ export default function BackToTopButton() {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed left-8 cursor-pointer bottom-28 bg-[#a16a6a] hover:bg-[#c26868] transition-colors text-white font-bold px-5 py-3 rounded-full shadow-lg"
+          className="fixed bottom-10 left-4 md:left-10 cursor-pointer bg-[#ffffff] hover:bg-[#f3d4d4] transition-colors text-black font-bold px-4 py-2 md:px-5 md:py-3 rounded-full shadow-xl"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}

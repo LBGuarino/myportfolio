@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import Typewriter from "@/components/Typewriter";
 import { FaDownload } from "react-icons/fa6";
-import Image from "next/image";
 import ProjectsSection from "@/components/ProjectsSection";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -37,10 +37,10 @@ export default function Home() {
           id="home"
           className="min-h-screen flex flex-col justify-start items-center bg-gray-50 px-4 py-8"
         >
-          <h1 className="text-center text-3xl mt-10 font-bold mb-8">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl mt-10 font-bold mb-8">
             {`< About me />`}
           </h1>
-          <div className="w-full md:w-1/2 min-h-[200px] text-center">
+          <div className="max-w-xl md:max-w-2xl px-4 text-center font-mono text-lg">
             <Typewriter text={loremText} speed={30} />
           </div>
           <div className="flex flex-row justify-center items-center gap-4 mt-10 text-lg text-blue-600 hover:underline">
@@ -56,10 +56,15 @@ export default function Home() {
           id="philosophy"
           className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-4 py-8"
         >
-          <h2 className="text-3xl font-bold mb-4">how do i approach work?</h2>
-          <p className="max-w-2xl text-center text-lg">
-            Aquí va una breve descripción sobre ti, tu experiencia y lo que te
-            apasiona.
+          <h2 className="text-2xl md:text-3xl lg:text-4xl mt-10 font-bold mb-8 px-7 text-center break-words">{"< how do i approach work? />"}</h2>
+          <p className="max-w-2xl text-center font-mono text-lg">
+          I approach my work as a continuous act of creation, a balance between logic and intuition, 
+          precision and spontaneity. To me, each project is a conversation—between technology and humanity, 
+          functionality and beauty, science and art. My methodology is deeply rooted in curiosity; I strive to 
+          ask meaningful questions and seek connections beyond the obvious. I believe empathy is the core of good 
+          design and development, guiding my decisions toward solutions that genuinely resonate with users. 
+          By harmonizing structured methodologies with artistic insight, I aim not just to build software, 
+          but to craft experiences that make technology feel deeply human.
           </p>
         </section>
 
@@ -76,12 +81,7 @@ export default function Home() {
           id="contact"
           className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-4 py-8"
         >
-          <h2 className="text-3xl font-bold mb-4">contact me</h2>
-          <p className="max-w-2xl text-center text-lg">
-            Puedes comunicarte conmigo mediante las redes sociales o enviarme un
-            mensaje directo.
-          </p>
-          {/* También podrías incluir un formulario de contacto */}
+          <ContactForm />
         </section>
       </motion.div>
     </div>

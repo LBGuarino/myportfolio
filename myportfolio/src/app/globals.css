@@ -2,9 +2,16 @@
 
 body {
   background-color: #f0e3e3;
-  font-family: 'Courier New', Courier, monospace
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
 }
