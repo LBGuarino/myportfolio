@@ -36,7 +36,7 @@ export default function AirportBanner() {
 
     const flipInterval = setInterval(() => {
       frames++;
-      let updated = [...currentChars];
+      const updated = [...currentChars];
 
       // Recorre cada letra y asigna una aleatoria si aún no coincide con la final
       for (let i = 0; i < maxLength; i++) {

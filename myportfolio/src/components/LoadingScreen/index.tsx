@@ -23,8 +23,6 @@ export default function LoadingScreen({ onFinish }: LoadingScreenProps) {
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
         className="text-2xl font-bold font-mono"
       >
         Loading...
