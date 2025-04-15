@@ -23,7 +23,7 @@ export default function Typewriter({ text, speed = 50 }: TypewriterProps) {
   }, [text, speed]);
 
   return (
-    <p className="font-mono text-lg text-center leading-relaxed inline">
+    <p className="font-mono min-h-screen text-lg text-center leading-relaxed inline">
       {displayedText}
       <motion.span
         className="ml-1"
