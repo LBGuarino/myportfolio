@@ -23,8 +23,9 @@ export default function Typewriter({ text, speed = 50 }: TypewriterProps) {
   }, [text, speed]);
 
   return (
-    <p className="font-mono min-h-screen text-lg text-center leading-relaxed inline">
-      {displayedText}
+    <p className="font-mono min-h-screen text-lg text-center leading-relaxed relative">
+      <span className="inline">{displayedText}</span>
+      <span className="invisible absolute top-0 left-0 right-0">{text}</span>
       <motion.span
         className="ml-1"
         animate={{ opacity: [1, 0, 1] }}
