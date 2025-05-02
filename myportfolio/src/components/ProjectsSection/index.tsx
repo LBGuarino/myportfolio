@@ -11,7 +11,7 @@ const projects = [
     description: "A cloud-based clinical imaging solution designed to enhance breast cancer screening through intuitive web interfaces and robust, compliant data management.",
     pdf: "/imago_web_interface.pdf",
     github: "https://github.com/LBGuarino/imago-web-interface",
-    url: "https://imago-project.vercel.app/",
+    url: "https://lbguarino.github.io/imago-web-interface/",
     image: "/imago_project_preview.jpg",
     tech: [
       "React",
